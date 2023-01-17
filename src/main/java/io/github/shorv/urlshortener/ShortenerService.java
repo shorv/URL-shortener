@@ -11,11 +11,11 @@ import java.security.NoSuchAlgorithmException;
 @Service
 public class ShortenerService {
 
-    @Autowired
-    RedisTemplate<String, String> redisTemplate;
+    private final RedisTemplate<String, String> redisTemplate;
     private final MessageDigest digest;
 
-    public ShortenerService() throws NoSuchAlgorithmException {
+    public ShortenerService(RedisTemplate<String, String> redisTemplate) throws NoSuchAlgorithmException {
+        this.redisTemplate = redisTemplate;
         this.digest = MessageDigest.getInstance("SHA-256");
     }
 
