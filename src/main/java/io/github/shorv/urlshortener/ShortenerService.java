@@ -31,7 +31,7 @@ public class ShortenerService {
     private String hash(String url, int length) {
         byte[] bytes = this.digest.digest(url.getBytes());
         String hash = String.format("%32x", new BigInteger(1, bytes));
-        return hash.substring(0, length - 1);
+        return hash.substring(0, length);
     }
 
     public String resolveUrl(String hash) throws HashUnknownException {
