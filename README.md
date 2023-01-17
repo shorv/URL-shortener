@@ -7,3 +7,5 @@ URL shortener API similiar to those known as TinyURL or Bitly. The application c
 # TechStack
 - SpringBoot
 - Redis
+- Gradle
+- Docker
