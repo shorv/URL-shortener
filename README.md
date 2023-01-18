@@ -34,7 +34,7 @@ Location header: http://localhost:8080/api/v1/{hash}
 
 ## Retrieve URL
 ```
-http://localhost:8080/api/v1/f8a22ca8
+http://localhost:8080/f8a22ca8
 
 Response:
   Success: HTTP 301 (Moved permamently)
